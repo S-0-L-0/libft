@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 19:16:14 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:16:19 by edforte          ###   ########.fr       */
+/*   Created: 2024/01/15 17:59:33 by edforte           #+#    #+#             */
+/*   Updated: 2024/01/15 19:24:01 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	void	*ptr;
+	unsigned char		*d;
+	unsigned const char	*s;
 
-	ptr = (void *)malloc(count * size);
-	if (!ptr)
-		return (0);
-	ft_bzero(ptr, count);
-	return (ptr);
+	d = dst;
+	s = src;
+	if (d < s)
+		ft_memcpy(dst, src, n);
+	else
+	{
+		d += n;
+		s += n;
+		while (n-- > 0)
+		{
+			*d = *s;
+			d --;
+			s --;
+		}
+	}
+	return (d);
 }

@@ -1,5 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 19:19:16 by edforte           #+#    #+#             */
+/*   Updated: 2024/01/15 19:20:05 by edforte          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_len(const char *str)
 {
@@ -14,9 +25,9 @@ int	ft_len(const char *str)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*strres;
-	int	i;
-	int	j;
-	int	len_max;
+	int		i;
+	int		j;
+	int		len_max;
 
 	i = 0;
 	j = 0;

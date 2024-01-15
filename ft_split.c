@@ -1,77 +1,101 @@
-char	*ft_mkword(char const *s, int start, int end)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 14:20:20 by edforte           #+#    #+#             */
+/*   Updated: 2024/01/15 19:26:42 by edforte          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_mkword(char const *str, int start, int end)
 {
-	char	*word;
-	int	i;
-	
-	word = (char *)malloc((end - start) *sizeof(int));
-	if (word == 0)
-		return(NULL);
-	while (start < end)
+	int		i;
+	char	*substr;
+
+	i = 0;
+	substr = (char *)malloc(((end - start) + 2) * sizeof(char));
+	while (start <= end)
 	{
-		word[i] = s[start];
+		substr[i] = str[start];
+		i ++;
 		start ++;
 	}
-	return (word);
+	substr[i] = '\0';
+	return (substr);
+}
+
+int	wds_count(char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 1;
+	while (s[i])
+	{
+		if (s[i] == c && s[i + 1])
+			count ++;
+		i ++;
+	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**res;
-	int	i;
-	int	j;
-	int	start;
+	int		i;
+	int		start;
+	int		end;
+	char	**words;
+	int		count;
 
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			j ++;
-		}
-		i ++;
-	}
-	i = 0;
-	j = 0;
+	i = -1;
 	start = 0;
-	res = (char **)malloc((j + 1) * sizeof(char));
-	while (s[i])
+	words = (char **)malloc(1 + wds_count(s, c) * sizeof(char *));
+	count = 0;
+	while (s[++i])
 	{
-		if (s[i] == c)
+		if (s[i] == c || s[i + 1] == '\0')
 		{
-			res[j] = *ft_mkword(s, start, i);
-			if (res[j] == NULL)
-				return (NULL);
-			j ++;
-			start = i + 1;
+			end = i - 1;
+			if (s [i + 1] == '\0')
+				end = i;
+			words[count] = ft_mkword(s, start, end);
+			count ++;
+			if (s[i + 1])
+				start = i + 1;
 		}
 	}
-	return (res);
+	words[count] = NULL;
+	return (words);
 }
 
-
-
-//#include <unistd.h>
+//int main() {
+//    // Example string
+//   char input_str[] = "This is a sample string to split";
 //
-//void	ft_putstr(char *str)
-//{
-//	int	i;
+//    // Character to split on
+//    char delimiter = ' ';
 //
-//	i = 0 ;
-//	while (str[i] != '\0')
-//	{
-//		write(1, &str[i], 1);
-//		i ++;
-//	}
-//}
+//    // Test ft_split function
+//    char **result = ft_split(input_str, delimiter);
 //
-//int	main(char **av, int ac)
-//{
-//	char	**words;
+//    // Print the result
+//    printf("Result:\n");
 //
-//	while (*av[1] && ac)
-//	{
-//		words = **ft_split;
+//    // Print using while loop
+//    int i = 0;
+//    while (result[i] != NULL) {
+//        printf("%s\n", result[i]);
+//        free(result[i]);  // Free each word
+//        i++;
+//    }
 //
-//	}
+//    free(result);  // Free the array of words
+//
+//    return 0;
 //}

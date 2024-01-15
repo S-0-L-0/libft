@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:47:45 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/10 14:11:07 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/15 18:35:53 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*s2;
 
+	s2 = (char *) s;
 	i = 0;
-	while (s[i])
+	while (s2[i])
 		i ++;
 	if (c == 0)
-		return (i);
+		return (&s2[i]);
 	while (i -- >= 0)
 	{
-		while (s[i] == (char) c)
-			return (i);
+		while (s2[i] == (char) c)
+			return (&s2[i]);
 	}
-	return (0);
+	return (NULL);
 }

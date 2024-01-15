@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:07:18 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/10 13:45:52 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/15 19:20:46 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	while (dst[i])
 		i ++;
-	while (src[j])
+	while (src[j] && (dstsize--) > 0)
 	{
 		dst[i] = src[j];
 		j ++;

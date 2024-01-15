@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:10:10 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/12 12:12:34 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/15 18:59:31 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-
 int		ft_toupper(int c);
-size_t	strlen(const char *s);
+size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);

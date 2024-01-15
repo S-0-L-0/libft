@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:49:57 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/10 13:41:16 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/15 17:58:10 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char		*d;
 	unsigned const char	*s;
+
+	d = dst;
+	s = src;
 	while (n-- > 0)
 	{
 		*d = *s;
-		dst ++;
-		src ++;
+		d ++;
+		s ++;
 	}
-	return (dst);
+	return (d);
 }

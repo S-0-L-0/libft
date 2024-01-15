@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 19:16:14 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:16:19 by edforte          ###   ########.fr       */
+/*   Created: 2024/01/15 20:37:49 by edforte           #+#    #+#             */
+/*   Updated: 2024/01/15 20:50:56 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void ft_putnbr_fd(int n, int fd)
 {
-	void	*ptr;
-
-	ptr = (void *)malloc(count * size);
-	if (!ptr)
-		return (0);
-	ft_bzero(ptr, count);
-	return (ptr);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n > 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + 48);
 }

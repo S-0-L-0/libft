@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:19:29 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/16 19:31:04 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:48:50 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int digits_counter(int n)
 {
     int i;
-    int sign;
 
     i = 0;
   if (n < 0)
@@ -53,18 +52,12 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int main()
-{
-    // Example usage
-    int number = -12345;
-
-    // Call the ft_itoa function and display the result
-    char *result_str = ft_itoa(number);
-    printf("Integer: %d\n", number);
-    printf("Converted string: %s\n", result_str);
-
-    // Don't forget to free the allocated memory
-    free(result_str);
-
-    return (0);
-}
+//int main()
+//{
+//    int number = -12345;
+//    char *result_str = ft_itoa(number);
+//    printf("Integer: %d\n", number);
+//    printf("Converted string: %s\n", result_str);
+//    free(result_str);
+//    return (0);
+//}

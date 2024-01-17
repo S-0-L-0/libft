@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 22:12:19 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/16 19:31:04 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:55:38 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 }
 
 
-int main()
-{
-    // Example usage
-    char const *s1 = "   Hello, World!   ";
-    char const *set = " ";
-
-    char *trimmed_str = ft_strtrim(s1, set);
-
-    // Display the original and trimmed strings
-    printf("Original string: \"%s\"\n", s1);
-    printf("Trimmed string:  \"%s\"\n", trimmed_str);
-
-    // Don't forget to free the allocated memory
-    free(trimmed_str);
-
-    return 0;
-}
+//int main()
+//{
+//    char const *s1 = "   Hello, World!   ";
+//    char const *set = " ";
+//    char *trimmed_str = ft_strtrim(s1, set);
+//    printf("Original string: \"%s\"\n", s1);
+//    printf("Trimmed string:  \"%s\"\n", trimmed_str);
+//    free(trimmed_str);
+//   return 0;
+//}
 

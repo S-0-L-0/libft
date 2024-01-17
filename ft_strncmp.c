@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:37:19 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:24:31 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 18:54:53 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	a = (unsigned char *)s1;
 	b = (unsigned char *)s2;
-	if (n <= 0)
-		return (0);
 	while ((a[i] || b[i]) && i < n)
 	{
 		if (a[i] != b[i])

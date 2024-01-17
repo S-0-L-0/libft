@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 20:37:49 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 20:50:56 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:46:18 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + 48);
+		ft_putchar_fd((n + 48), fd);
 }

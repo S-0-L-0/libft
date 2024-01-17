@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:20:20 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:26:42 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:51:14 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,28 +74,19 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 
-//int main() {
-//    // Example string
+//int main() 
+//{
 //   char input_str[] = "This is a sample string to split";
-//
-//    // Character to split on
-//    char delimiter = ' ';
-//
-//    // Test ft_split function
-//    char **result = ft_split(input_str, delimiter);
-//
-//    // Print the result
-//    printf("Result:\n");
-//
-//    // Print using while loop
-//    int i = 0;
-//    while (result[i] != NULL) {
+//   char delimiter = ' ';
+//   char **result = ft_split(input_str, delimiter);
+//   printf("Result:\n");
+//   int i = 0;
+//   while (result[i] != NULL) 
+//	{
 //        printf("%s\n", result[i]);
-//        free(result[i]);  // Free each word
+//        free(result[i]);
 //        i++;
-//    }
-//
-//    free(result);  // Free the array of words
-//
+//	}
+//    free(result);
 //    return 0;
 //}

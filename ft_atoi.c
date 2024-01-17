@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:26:35 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:38:49 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:49:17 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,9 @@ int	ft_atoi(const char *str)
 }
 
 //int main() {
-//    char str_num[] = "  25678"; // A string representing an integer
-//
-//    // Using atoi to convert the string to an integer
+//    char str_num[] = "  25678";
 //    int converted_num = ft_atoi(str_num);
-//
-//    // Printing the result
 //    printf("Original string: %s\n", str_num);
 //    printf("Converted integer: %d\n", converted_num);
-//
 //   return 0;
 //}

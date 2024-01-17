@@ -1,23 +1,61 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 22:12:19 by edforte           #+#    #+#             */
+/*   Updated: 2024/01/16 19:31:04 by edforte          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_len(char const *str)
+#include "libft.h"
+
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	int	i;
+	size_t	start;
+	size_t	end;
+	size_t	i;
+	char	*s2;
 
 	i = 0;
-	while (str[i])
+	start = 0;
+	end = ft_strlen(s1);
+	while(ft_strchr(set, (int)s1[i]) && s1[i])
+	{
+		start ++;
 		i ++;
-	return (i);
+	}
+	i = end;
+	while(ft_strchr(set, (int)s1[i]) && i > start)
+	{
+		end --;
+		i --;
+	}
+	s2 = (char *)malloc(((end - start) + 2) * sizeof(char));
+	s2 = ft_substr(s1, start, (end - start) + 1);
+	if (!s2)
+		return (0);
+	return (s2);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+
+int main()
 {
-	char	*trimstr;
-	int	len_str;
-	int	i;
+    // Example usage
+    char const *s1 = "   Hello, World!   ";
+    char const *set = " ";
 
-	len_str = (ft_len(s1) - (ft_len(set) * 2)) + 1;
-	trimstr = (char *) malloc(len_str * sizeof(char));
+    char *trimmed_str = ft_strtrim(s1, set);
 
+    // Display the original and trimmed strings
+    printf("Original string: \"%s\"\n", s1);
+    printf("Trimmed string:  \"%s\"\n", trimmed_str);
+
+    // Don't forget to free the allocated memory
+    free(trimmed_str);
+
+    return 0;
 }
+

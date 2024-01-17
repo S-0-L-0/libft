@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:06:41 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/10 13:45:05 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/16 19:29:26 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	while (src[i])
 		i ++;
-	if (dstsize < 0)
+	if (dstsize == 0)
 		return (i);
 	while (src[j] && j < dstsize -1)
 	{

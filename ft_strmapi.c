@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:49:43 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/17 11:54:49 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/22 18:29:34 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	str = (char *)malloc(ft_strlen(s) * sizeof(char));
-	while(s[i])
+	while (s[i])
 	{
 		str[i] = f(i, (char)s[i]);
 		i ++;

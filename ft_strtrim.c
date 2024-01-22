@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 22:12:19 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/17 11:55:38 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/22 18:31:53 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strtrim(const char *s1, const char *set)
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1);
-	while(ft_strchr(set, (int)s1[i]) && s1[i])
+	while (ft_strchr(set, (int)s1[i]) && s1[i])
 	{
 		start ++;
 		i ++;
 	}
 	i = end;
-	while(ft_strchr(set, (int)s1[i]) && i > start)
+	while (ft_strchr(set, (int)s1[i]) && i > start)
 	{
 		end --;
 		i --;
@@ -40,7 +40,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (s2);
 }
 
-
 //int main()
 //{
 //    char const *s1 = "   Hello, World!   ";
@@ -51,4 +50,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 //    free(trimmed_str);
 //   return 0;
 //}
-

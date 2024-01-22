@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:59:33 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/17 12:53:09 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/22 18:27:39 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,14 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-#include <stdio.h>
-#include <string.h>
-
 //int main()
 //{
-    // Test with overlapping memory regions
+// Test with overlapping memory regions
 //    char buffer[20] = "Hello, World!";
 //    ft_memmove(buffer + 3, buffer, 10);
 //    printf("After memmove (overlapping memory regions):\n");
 //    printf("Buffer: %s\n", buffer);
-    // Test with non-overlapping memory regions
+// Test with non-overlapping memory regions
 //    char source[] = "How are you?";
 //    char destination[20];
 //    ft_memmove(destination, source, strlen(source) + 1);

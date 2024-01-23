@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:46:57 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:18:43 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/23 19:00:26 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
+	t_list	*p;
 
-	if (!lst || !del)
-		return (NULL);
-	tmp = lst;
-	while (tmp->next)
+	if (!lst || !del || !(*lst))
+		return ;
+	p = *lst;
+	while (p)
 	{
-		del(tmp->content);
-		free(tmp);
-		tmp = tmp->next;
+		del(p->content);
+		tmp = p->next;
+		free(p);
+		p = tmp;
 	}
+	*lst = NULL;
 }

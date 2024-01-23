@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:19:16 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/15 19:20:05 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/23 12:17:57 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	int		len_max;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	len_max = ((ft_len(s1) + ft_len(s2)) + 1);
 	strres = (char *) malloc(len_max * sizeof(char));
-	if (strres == 0)
+	if (!strres)
 		return (NULL);
 	while (s1[i])
 	{
@@ -41,11 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i ++;
 	}
 	while (s2[j])
-	{
-		strres[i] = s2[j];
-		i ++;
-		j ++;
-	}
+		strres[i++] = s2[j++];
 	strres[i] = '\0';
 	return (strres);
 }

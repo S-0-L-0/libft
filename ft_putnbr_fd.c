@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 20:37:49 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:28:32 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/23 15:59:32 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		ft_putnbr_fd(n, fd);
 	}
-	else if (n > 10)
+	else if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);

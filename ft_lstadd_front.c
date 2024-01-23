@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:20:31 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:17:56 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/22 19:54:57 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst)
-		return (NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

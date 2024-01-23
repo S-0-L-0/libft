@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:15:01 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:20:56 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/23 19:57:58 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,27 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
+	t_list	*p;
+	t_list	*cpy;
 
-	new = (size_t *)malloc(sizeof(size_t));
-	if (!lst || !f || !del || !new)
+	if (!lst || !f || !del)
+		return (NULL);
+	new = (ft_lstnew(f(lst->content)));
+	cpy = new;
+	if (!new)
 	{
-		ft_lstclear(new, del);
+		ft_lstclear(&new, del);
 		return (NULL);
 	}
+	p = lst;
+	lst = lst->next;
 	while (lst)
 	{
-		new->content = ft_lstnew(f(lst->content));
+		new->next = ft_lstnew(f(lst->content));
+		if (!new->content)
+			return (ft_lstclear(&p, del), NULL);
 		lst = lst->next;
 		new = new->next;
 	}
-	return (new);
+	return (cpy);
 }

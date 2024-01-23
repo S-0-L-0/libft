@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:53:12 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:19:50 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/23 19:36:18 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*tmp;
-
 	if (!lst || !f)
-		return (NULL);
-	tmp = lst;
-	while (tmp->next)
+		return ;
+	while (lst)
 	{
-		f(tmp->content);
-		tmp = tmp->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }

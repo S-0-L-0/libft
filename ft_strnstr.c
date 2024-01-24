@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:41:01 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/22 18:32:19 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:56:04 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     // Test with a string and a substring
-//     const char *haystack = "lorem ipsum dolor sit amet";
-//     const char *needle = "ipsum";
-
-//     // Using strnstr to find the substring
-//     char *result = ft_strnstr(haystack, needle, 15);
-
-//     if (result != NULL)
-//printf("Substring \"%s\" found at position %ld\n", needle, result - haystack);
-//     else
-//         printf("Substring \"%s\" not found in \"%s\"\n", needle, haystack);
-
-//     return 0;
-// }

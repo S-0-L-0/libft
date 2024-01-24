@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:19:29 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/23 14:54:43 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:53:49 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// int main()
-// {
-//    int number = -12345;
-//    char *result_str = ft_itoa(number);
-//    printf("Integer: %d\n", number);
-//    printf("Converted string: %s\n", result_str);
-//    free(result_str);
-//    return (0);
-// }

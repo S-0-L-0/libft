@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:20:20 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/23 11:47:52 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:55:13 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,21 +87,3 @@ char	**ft_split(char const *s, char c)
 	words[count] = NULL;
 	return (words);
 }
-
-// int main() 
-// {
-//    char input_str[] = "        ";
-//    char delimiter = ' ';
-//    char **result = ft_split(input_str, delimiter);
-//    printf("Result:\n");
-//    int i = 0;
-//    while (result[i] != NULL) 
-// 	{
-// 		printf("printing: ");
-// 		printf("%s\n", result[i]);
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	return 0;
-// }

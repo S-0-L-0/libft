@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:26:35 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/17 11:49:17 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:53:11 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-//int main() {
-//    char str_num[] = "  25678";
-//    int converted_num = ft_atoi(str_num);
-//    printf("Original string: %s\n", str_num);
-//    printf("Converted integer: %d\n", converted_num);
-//   return 0;
-//}

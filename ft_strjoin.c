@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:19:16 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/23 12:17:57 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:55:26 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strres[i] = '\0';
 	return (strres);
 }
-
-//int main(int ac, char **av)
-//{
-//	if (ac)
-//	{
-//		printf("%s\n", av[1]);
-//		printf("%s\n", av[2]);
-//		printf("%s\n", ft_strjoin(av[1], av[2]));
-//	}
-//	free (strres);
-//	return (0);
-//}

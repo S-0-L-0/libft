@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 22:12:19 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/23 16:24:17 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:56:26 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 		return (NULL);
 	return (s2);
 }
-
-// int main()
-// {
-//    char const *s1 = "   Hello, World!   ";
-//    char const *set = " ";
-//    char *trimmed_str = ft_strtrim(s1, set);
-//    printf("Original string: \"%s\"\n", s1);
-//    printf("Trimmed string:  \"%s\"\n", trimmed_str);
-//    free(trimmed_str);
-//   return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: edforte <edforte@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:49:43 by edforte           #+#    #+#             */
-/*   Updated: 2024/01/23 14:59:55 by edforte          ###   ########.fr       */
+/*   Updated: 2024/01/24 20:55:50 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-//int main()
-//{
-//    char input_str[] = "Hello, World!";
-//    char *result = ft_strmapi(input_str, &my_mapping_function);
-//    printf("Original string: %s\n", input_str);
-//    printf("Mapped string: %s\n", result);
-//    free(result);
-//    return 0;
-//}
